@@ -81,7 +81,8 @@ node {
            subject: "Terraform Build for ${environment} Complete.",
            body: "Jenkins Job ${env.JOB_NAME} - build  ${env.BUILD_NUMBER} for ${environment}. Please investigate."
     }
-  }
+*/  
+}
 
   catch (caughtError) {
     err = caughtError
@@ -95,6 +96,6 @@ node {
     }
   }
 
-*/
+
 }
 
