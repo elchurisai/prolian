@@ -27,7 +27,10 @@ node {
       pwd
       print " where am i "
       print "Init Provider" 
-      sh "cd terraform/aws/ && /usr/local/bin/terraform init"
+     
+      //sh "cd terraform/aws/ && /usr/local/bin/terraform init"
+      
+      sh "/usr/local/bin/terraform init"
     }
 
 /*
