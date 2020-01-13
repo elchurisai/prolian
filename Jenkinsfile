@@ -38,13 +38,13 @@ node {
       print "Validating The TF Files"
       sh "cd terraform/aws/ && /usr/local/bin/terraform validate -var-file=${environment}-secrets.tfvars"
     }
-    
+  */  
     stage ('Terraform Plan') {
-      withCredentials([string(credentialsId: 'aws-access-key', variable: 'AWS_ACCESS_KEY_ID'), 
-                       string(credentialsId: 'aws-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
+      withCredentials([string(credentialsId: 'aws-access-key', variable: 'Access_key_ID'), 
+                       string(credentialsId: 'aws-secret-key', variable: 'Secret_access_key')]) {
         sh """
          set +x
-         cd terraform/aws/ && /usr/local/bin/terraform plan -var-file=${environment}-secrets.tfvars -out=create.tfplan 
+        terraform plan  
          """
                        }  
     }
@@ -53,15 +53,15 @@ node {
     input 'Deploy stack?'
     
     stage ('Terraform Apply') {
-      withCredentials([string(credentialsId: 'aws-access-key', variable: 'AWS_ACCESS_KEY_ID'), 
-                       string(credentialsId: 'aws-secret-key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
+      withCredentials([string(credentialsId: 'aws-access-key', variable: 'Access_key_ID'), 
+                       string(credentialsId: 'aws-secret-key', variable: 'Secret_access_key')]) {
         sh """
          set +x
-         cd terraform/aws/ && /usr/local/bin/terraform apply create.tfplan 
+        terraform apply  
          """
        }  
     }
-    
+/*    
     // we should include testing stage(s) here. test-kitchen, infospec, etc... 
     stage ('Re-Encrypt the Secrets File') {
       sh """
