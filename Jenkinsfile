@@ -5,7 +5,7 @@ node {
   def err = null
   def environment = "Development"
   currentBuild.result = "SUCCESS"
-  load "$JENKINS_HOME/.envvars/.env.groovy"
+  //load "$JENKINS_HOME/.envvars/.env.groovy"
 
   try {
     stage ('Checkout') {
