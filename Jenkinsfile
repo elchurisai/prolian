@@ -53,7 +53,7 @@ node {
     
      
    
-    /*
+    
     
     // wait for approval. If Plan checks out.
     input 'Deploy stack?'
@@ -68,7 +68,7 @@ node {
        }  
     }
 
-    
+    /*
     // we should include testing stage(s) here. test-kitchen, infospec, etc... 
     stage ('Re-Encrypt the Secrets File') {
       sh """
