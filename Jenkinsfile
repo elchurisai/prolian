@@ -30,7 +30,7 @@ node {
      
       //sh "cd terraform/aws/ && /usr/local/bin/terraform init"
       
-      sh "/usr/local/bin/terraform init"
+      sh "terraform init"
     }
 
 /*
