@@ -49,6 +49,19 @@ node {
                        }  
     }
 
+
+    stage('Approval') {
+      steps {
+        script {
+          def userInput = input(id: 'confirm', message: 'Apply Terraform?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Apply terraform', name: 'confirm'] ])
+        }
+      }
+    }
+    
+    
+   
+    
+    
     // wait for approval. If Plan checks out.
     input 'Deploy stack?'
     
@@ -61,7 +74,8 @@ node {
          """
        }  
     }
-/*    
+/*
+    
     // we should include testing stage(s) here. test-kitchen, infospec, etc... 
     stage ('Re-Encrypt the Secrets File') {
       sh """
