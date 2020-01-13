@@ -40,8 +40,8 @@ node {
     }
   */  
     stage ('Terraform Plan') {
-      withCredentials([string(credentialsId: 'aws-access-key', variable: 'Access_key_ID'), 
-                       string(credentialsId: 'aws-secret-key', variable: 'Secret_access_key')]) {
+      withCredentials([string(credentialsId: 'Access_key_ID', variable: 'AWS_ACCESS_KEY_ID'),
+                       string(credentialsId: 'Secret_access_key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
         sh """
          set +x
         terraform plan  
@@ -53,8 +53,8 @@ node {
     input 'Deploy stack?'
     
     stage ('Terraform Apply') {
-      withCredentials([string(credentialsId: 'aws-access-key', variable: 'Access_key_ID'), 
-                       string(credentialsId: 'aws-secret-key', variable: 'Secret_access_key')]) {
+      withCredentials([string(credentialsId: 'Access_key_ID', variable: 'AWS_ACCESS_KEY_ID'), 
+                       string(credentialsId: 'Secret_access_key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
         sh """
          set +x
         terraform apply  
