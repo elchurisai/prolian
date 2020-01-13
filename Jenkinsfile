@@ -23,6 +23,9 @@ node {
 */
 
     stage ('Terraform Init') {
+      
+      pwd
+      print " where am i "
       print "Init Provider" 
       sh "cd terraform/aws/ && /usr/local/bin/terraform init"
     }
