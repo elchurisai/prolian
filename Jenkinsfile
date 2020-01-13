@@ -63,7 +63,7 @@ node {
                        string(credentialsId: 'Secret_access_key', variable: 'AWS_SECRET_ACCESS_KEY')]) {
         sh """
          set +x
-        terraform apply  
+        terraform apply --auto-approve 
          """
        }  
     }
