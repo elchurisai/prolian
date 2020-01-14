@@ -30,7 +30,10 @@ variable "vpc_id" {
     default  = "vpc-be7355c4"
 }
 
+variable "instance_type" {
 
+    default  = "t2.micro"
+}
 
 
 
