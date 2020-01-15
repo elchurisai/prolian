@@ -24,14 +24,14 @@ output "identical_node_nic_subnet_id" {
 
 }
 
+*/
 
 output "identical_node_nic_private_ips" {
 
-  value = "${module.identical_node_nic.private_ips}"
+  value = "${module.public_node_ec2.public_ips}"
 
 }
 
-*/
 
 
 /*
