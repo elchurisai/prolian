@@ -30,3 +30,4 @@ type = "list"
 
 }
 
+variable public_ips {}
