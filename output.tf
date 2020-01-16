@@ -32,6 +32,12 @@ output "public_node_ec2" {
 
 }
 
+output "public_node_ec2" {
+
+  value = "${module.public_node_ec2.public_ip}"
+
+}
+
 /*
 output "sample_node_mic_sg" {
 
