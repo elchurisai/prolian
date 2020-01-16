@@ -26,7 +26,7 @@ output "identical_node_nic_subnet_id" {
 
 */
 
-output "identical_node_nic_private_ips" {
+output "public_node_ec2" {
 
   value = "${module.public_node_ec2.instance_id}"
 
