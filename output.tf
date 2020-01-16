@@ -34,7 +34,7 @@ output "public_node_instance_id" {
 
 output "public_node_public_ips" {
 
-  value = "${module.public_node_eip.public_ip}"
+  value = "${module.public_node_eip.eip_public_ip}"
 
 }
 
