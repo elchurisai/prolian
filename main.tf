@@ -51,7 +51,7 @@ name = "identical_node_sg"
 vpc_id = "${var.vpc_id}"
 #tags = "${var.tags}"
 
-cidr_blocks = ["123.123.123.123/32" , "123.123.123.15/32"]
+cidr_blocks = ["0.0.0.0/0"]
 from_port = "22"
 to_port = "22"
 
@@ -128,7 +128,7 @@ name = "public_node_sg"
 vpc_id = "${var.vpc_id}"
 #tags = "${var.tags}"
 
-cidr_blocks = ["123.123.123.123/32" , "123.123.123.15/32"]
+cidr_blocks = ["0.0.0.0/0"]
 from_port = "22"
 to_port = "22"
 }
