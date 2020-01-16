@@ -22,7 +22,7 @@ variable "region" {
 
 variable "ami_id" {
 
-default = "ami-07ebfd5b3428b6f4d"
+default = "ami-04b9e92b5572fa0d1"
 }
 
 variable "vpc_id" {
