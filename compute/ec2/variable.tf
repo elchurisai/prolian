@@ -29,5 +29,3 @@ variable "network_interface" {
 type = "list"
 
 }
-
-variable public_ips {}
