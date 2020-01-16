@@ -28,11 +28,9 @@ output "identical_node_nic_subnet_id" {
 
 output "identical_node_nic_private_ips" {
 
-  value = "${module.public_node_ec2.public_ips}"
+  value = "${module.public_node_ec2.instance_id}"
 
 }
-
-
 
 /*
 output "sample_node_mic_sg" {
