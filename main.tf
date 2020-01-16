@@ -137,6 +137,7 @@ module "public_node_mic_sg2" {
 
 source = "./compute/sg"
 instance_count = 2
+protocol = "HTTP"    
 name = "public_node_sg"
 vpc_id = "${var.vpc_id}"
 #tags = "${var.tags}"
