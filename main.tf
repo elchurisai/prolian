@@ -133,6 +133,21 @@ from_port = "22"
 to_port = "22"
 }
 
+module "public_node_mic_sg2" {
+
+source = "./compute/sg"
+instance_count = 2
+name = "public_node_sg"
+vpc_id = "${var.vpc_id}"
+#tags = "${var.tags}"
+
+cidr_blocks = ["0.0.0.0/0"]
+from_port = "80"
+to_port = "80"
+}
+    
+    
+    
 
 module "public_node_nic" {
 
