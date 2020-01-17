@@ -16,6 +16,10 @@ network_interface  {
 }
 
 
+# Ansible requires Python to be installed on the remote machine as well as the local machine.
+ provisioner "remote-exec" {
+   inline = ["sudo apt-get -qq install python -y"]
+ }
   
 tags = "${merge(map("Name", var.instance_count > 1 ? format("%s-%03d", var.name, count.index+1) : var.name), var.tags)}"
 
